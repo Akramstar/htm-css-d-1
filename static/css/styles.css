@@ -232,7 +232,7 @@ li.nav-icon i >span{
 /* Main Header */
 .main-content {
     text-align: center;
-    align-items: center;
+    margin-top: 20vh;
 
 }
 .main-content h2:first-child {
@@ -256,54 +256,190 @@ li.nav-icon i >span{
     font-weight: 600;
     border-radius: 4px;
     background-color: gold;
+    transition: all 0.8s ease;
 }
 
 .main-content a button{
     cursor: pointer;
 }
 
+
 .main-content a:last-child button{
     color: white;
     background-color: transparent;
     border: 1px solid grey;
 }
+
+/* .main-content button:first-child:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.main-content button:last-child:hover{
+    background-color: gold;
+    color: black;
+} */
+
+.container-sec1 {
+    background-image: url(../images/industry-background.png);
+    background-color: rgb(9, 9, 53);
+    background-blend-mode: normal;
+    background-position-x: center;
+}
+
 .container-section-1 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 2em;
-    background-color:blueviolet;
+    
     width: 100%;
 }
 
-.container-section-1 .section-1-left {
-    border: 2px solid red;
-    
-
+.section-1-left {
+    margin-left: 3%;
 }
+
 .section-1-right {
-    border: 2px solid green;
-    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    width: 40%;
+    border-top: 5px solid rgb(210, 203, 203);
 }
 .section-1-right p {
     width: 60%;
+    margin-top: 4%;
     display: inline-block;
     color: rgb(227, 222, 222);
 }
 .section-1-right button {
-    padding: 0.8em;
+    height: 30%;
     background-color: gold;
     border: 1px solid black;
     border-radius: 3px;
     transition: all 0.8s ease;
+    font-weight: 800;
+    margin-top: 3%;
+    padding: 3%;
 }
 .section-1-right button:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(226, 192, 3);
+   
 }
 
+.section-1-left h2:first-child{
+    color: gold;
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+.section-1-left h2:last-child{
+    color: white;
+    font-size: 3.0em;
+    margin-top: 0;
+}
 
+/* cards */
+.cards {
 
+    display: flex;
+    flex-flow: row wrap;
+    
+    
+    width: 90%;
+    margin: auto;;
+}
+
+.cards .card {
+    background-color: beige;
+    border: 3px solid rgb(53, 46, 46);
+    width: 23.5%;
+    margin-right: 2%;
+    border-radius: 3px;
+    padding: 2%;
+    position: relative;
+    padding-bottom: 0;
+    transition: all 0.8s ease;
+}
+
+.cards .card h3 {
+    width: 20%;
+    color: rgb(13, 13, 79);
+}
+.cards .card h4 {
+    border-top: 1px solid grey;
+    padding-top: 10%;
+    color: rgb(13, 13, 79);
+    
+}
+
+.cards .card p {
+    color: rgb(69, 65, 65);
+}
+
+.icon-up{
+    position: absolute;
+    top: 14%;
+    right: 5%;
+    font-size: 1.5em;
+
+   
+}
+.icon-up {
+    background: red;
+    color: white;
+    padding: 3%;
+    border-radius: 25%;
+}
+.icon-bottom {
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+    font-size: 1em;
+    color: grey;
+
+}
+
+.cards .card:last-child {
+    margin-right: 0;
+}
+
+/* .card::after {
+    content: "";
+    
+    position: absolute;
+    inset: 0;
+    background-image: url(../images/construction-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    visibility: hidden;
+    opacity: 0;
+    
+} */
+.card:hover {
+    
+
+    background-image: url(../images/construction-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+.card:hover h3 {
+    color: white;
+    transition: all 0.2s ease;
+}
+.card:hover p {
+    color: rgb(227, 227, 227);
+    text-shadow: 0px 0px 3px rgba(241,241,241,0.52);
+}
+
+/* .card:hover h4 {
+    color: goldenrod;
+
+} */
+
+/* end of cards */
 /* End of Main Header */
 
 
@@ -318,3 +454,25 @@ li.nav-icon i >span{
 
 } */
 
+/* marquee */
+marquee {
+    margin-block: 4%;
+}
+marquee span:nth-child(1), marquee span:nth-child(5), marquee span:nth-child(9), marquee span:nth-child(13) {
+    font-size: 25px;
+    color: white;
+    font-weight: 800;
+}
+
+marquee span:nth-child(3), marquee span:nth-child(7), marquee span:nth-child(11), marquee span:nth-child(15) {
+    font-size: 25px;
+    color: rgb(247, 119, 0);
+    font-weight: 800;
+}
+
+marquee span:nth-child(2), marquee span:nth-child(4), marquee span:nth-child(6), marquee span:nth-child(10), marquee span:nth-child(12), marquee span:nth-child(14) {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+}
+/* end marquee */
