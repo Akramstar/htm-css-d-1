@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 ul li {
@@ -21,6 +22,67 @@ a {
 
 
 /* End Global styles */
+
+/* social_pins */
+
+#social_pins{
+    position: fixed;
+    top: 50vh;
+    
+
+}
+#social_pins div {
+    background-color: blue;
+    margin-bottom: 10px;
+    padding: 0.5em;
+    border-top-right-radius: 50px ;
+    border-bottom-right-radius: 50px;
+    font-size: 1em;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: -70%;
+    transition: all 1s ease;
+}
+#social_pins div:first-child, #social_pins div:first-child span{
+    background-color: rgb(244, 92, 92);
+    color: white;
+}
+
+#social_pins div:nth-child(2), #social_pins div:nth-child(2) span{
+    background-color: rgb(44, 60, 136);
+    color: white;
+}
+
+#social_pins div:nth-child(3), #social_pins div:nth-child(3) span{
+    background-color: rgb(25, 129, 106);
+    color: white;
+}
+
+#social_pins div:nth-child(4), #social_pins div:nth-child(4) span{
+    background-color: rgb(192, 187, 28);
+    color: white;
+}
+
+
+
+
+#social_pins div:hover {
+    left: 0;
+}
+
+#social_pins div a {
+    color: black;
+    text-decoration: none;
+}
+#social_pins div a i {
+    padding: 0.6em;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 1.2em;
+    justify-content: end;
+}
+/* End social_pins */
 
 /* Nav */
 
@@ -82,34 +144,38 @@ header#header nav .nav-right {
     visibility: hidden;
     left: -35px;
     transition: all 0.8s ease-in-out;
+    box-shadow: 1px 1px 10px 5px black;
     
 } 
 
 .nav-right>ul li:last-child{
-    background-color: #f40b0b;
-    color: white;
-    padding: 10px;
-    border-radius: 2px;
+    border-bottom: none;
 }
 
 
 .nav-right ul li:nth-child(2):hover .submenu-1{
     opacity: 1;
     visibility: visible;
+
+    transform: scale(1.07);
+    
 }
 .nav-right ul li:nth-child(3):hover .submenu-2{
     opacity: 1;
     visibility: visible;
+    transform: scale(1.07);
 }
 
 .nav-right ul li:nth-child(4):hover .submenu-3{
     opacity: 1;
     visibility: visible;
+    transform: scale(1.07);
 }
 
 .nav-right ul li:nth-child(6):hover .submenu-4{
     opacity: 1;
     visibility: visible;
+    transform: scale(1.07);
 }
 
 
@@ -121,9 +187,9 @@ header#header nav .nav-right {
 
 
 .submenu li {
-    border-bottom: 2px solid rgb(13, 14, 13);
+    border-bottom: 1px solid rgb(13, 14, 13);
     background-color: gold;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 8px;
     
 }
@@ -201,11 +267,54 @@ li.nav-icon i >span{
     background-color: transparent;
     border: 1px solid grey;
 }
+.container-section-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 2em;
+    background-color:blueviolet;
+    width: 100%;
+}
 
+.container-section-1 .section-1-left {
+    border: 2px solid red;
+    
 
-
-
+}
+.section-1-right {
+    border: 2px solid green;
+    width: 50%;
+}
+.section-1-right p {
+    width: 60%;
+    display: inline-block;
+    color: rgb(227, 222, 222);
+}
+.section-1-right button {
+    padding: 0.8em;
+    background-color: gold;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: all 0.8s ease;
+}
+.section-1-right button:hover {
+    background-color: white;
+    color: black;
+}
 
 
 
 /* End of Main Header */
+
+
+/* pin-it-social */
+
+/* #Social-pin {
+    position: fixed;
+    left: 0;
+    top: 50vw;
+    background-color: brown;
+
+
+} */
+
