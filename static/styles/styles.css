@@ -78,7 +78,8 @@ header#header nav .nav-right {
 
 .submenu-1, .submenu-2, .submenu-3, .submenu-4{
     position: absolute;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     left: -35px;
     transition: all 0.8s ease-in-out;
     
@@ -93,18 +94,22 @@ header#header nav .nav-right {
 
 
 .nav-right ul li:nth-child(2):hover .submenu-1{
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 .nav-right ul li:nth-child(3):hover .submenu-2{
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .nav-right ul li:nth-child(4):hover .submenu-3{
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .nav-right ul li:nth-child(6):hover .submenu-4{
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 
