@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    overflow: hidden;
+   
 }
 
 ul li {
@@ -94,8 +94,8 @@ header#header {
     background-size: cover;
     background-attachment: scroll;
     background-blend-mode:darken;
-   position: relative;
-   background-color: rgba(59, 47, 47, 0.202);
+    position: relative;
+    background-color: rgba(59, 47, 47, 0.202);
 
 }
 /* header#header::before {
@@ -109,7 +109,7 @@ header#header nav {
     justify-content: space-between;
     
     border-bottom: 4px solid white;
-    flex-flow: nowrap row;
+    flex-flow: wrap row;
 
 }
 .nav-left {
@@ -153,9 +153,8 @@ header#header nav .nav-right {
 
 
 .nav-right ul li:nth-child(2):hover .submenu-1{
-    opacity: 1x;
+    opacity: 1;
     visibility: visible;
-
     transform: scale(1.07);
     
 }
@@ -215,6 +214,7 @@ li.nav-icon i{
 
 li.nav-icon i:first-child{
     position: relative;
+    margin-right: 1.2em;
 }
 
 li.nav-icon i >span{
@@ -224,6 +224,7 @@ li.nav-icon i >span{
     border-radius: 50%;
     padding: 5px;
     top: -10px;
+    left: 12px;
 }
 
 /* End of Navbar */
