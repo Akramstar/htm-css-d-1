@@ -478,9 +478,7 @@ marquee span:nth-child(2), marquee span:nth-child(4), marquee span:nth-child(6),
 /* end marquee */
 @media screen and (max-width: 750px)
 {
-    body{
-overflow: hidden;
-    }
+    
 .cards card {
     width: 100%;
 }
