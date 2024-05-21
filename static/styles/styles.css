@@ -1,0 +1,206 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+/* End Global styles */
+
+/* Nav */
+
+header#header {
+    background-image: url(../images/hero-three.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: left right;
+    background-size: cover;
+    background-attachment: scroll;
+    background-blend-mode:darken;
+   position: relative;
+   background-color: rgba(59, 47, 47, 0.202);
+
+}
+/* header#header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.178);
+} */
+header#header nav {
+    display: flex;
+    justify-content: space-between;
+    
+    border-bottom: 4px solid white;
+    flex-flow: nowrap row;
+
+}
+.nav-left {
+    padding: 1.4em 1em 0 1em; 
+}
+
+.nav-left h2 {
+    margin-bottom: 0;
+}
+.nav-left>span {
+
+    font-size: 0.5em;
+    letter-spacing: 1px;
+}
+
+header#header nav .nav-right {
+    width: 70%;
+    padding: 1.2em 0 0 0;
+}
+.nav-icon {
+    color: white;
+}
+
+.nav-right ul li:nth-child(2), .nav-right ul li:nth-child(3), .nav-right ul li:nth-child(4), .nav-right ul li:nth-child(6){
+    position: relative;
+    
+}
+
+.submenu-1, .submenu-2, .submenu-3, .submenu-4{
+    position: absolute;
+    display: none;
+    left: -35px;
+    transition: all 0.8s ease-in-out;
+    
+} 
+
+.nav-right>ul li:last-child{
+    background-color: #f40b0b;
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+
+.nav-right ul li:nth-child(2):hover .submenu-1{
+    display: block;
+}
+.nav-right ul li:nth-child(3):hover .submenu-2{
+    display: block;
+}
+
+.nav-right ul li:nth-child(4):hover .submenu-3{
+    display: block;
+}
+
+.nav-right ul li:nth-child(6):hover .submenu-4{
+    display: block;
+}
+
+
+
+
+
+/* , .nav-right ul li:nth-child(3), .nav-right ul li:nth-child(4), .nav-right ul li:nth-child(6):hover  */
+
+
+
+.submenu li {
+    border-bottom: 2px solid rgb(13, 14, 13);
+    background-color: gold;
+    border-radius: 4px;
+    padding: 8px;
+    
+}
+
+
+
+header#header nav .nav-right> ul{
+    display: flex;
+    flex-flow: nowrap row;
+}
+header#header nav .nav-right >ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header#header nav .nav-right >ul li a{
+    padding:0.5em;
+    list-style: none;
+}
+
+li.nav-icon i{
+    font-size: 1em;
+}
+
+li.nav-icon i:first-child{
+    position: relative;
+}
+
+li.nav-icon i >span{
+    position: absolute;
+    font-size: 10px;
+    background-color: orange;
+    border-radius: 50%;
+    padding: 5px;
+    top: -10px;
+}
+
+/* End of Navbar */
+
+/* Main Header */
+.main-content {
+    text-align: center;
+    align-items: center;
+
+}
+.main-content h2:first-child {
+    color: gold;
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 0;
+}
+.main-content>h2:nth-child(2){
+    margin: 0;
+    font-size: 2.8em;
+    color: white;
+}
+.main-content p {
+    line-height: 0.5em;
+    padding-bottom: 1em;
+    color: rgb(232, 226, 226);
+}
+.main-content button{
+    padding:2em;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: gold;
+}
+
+.main-content a button{
+    cursor: pointer;
+}
+
+.main-content a:last-child button{
+    color: white;
+    background-color: transparent;
+    border: 1px solid grey;
+}
+
+
+
+
+
+
+
+/* End of Main Header */
