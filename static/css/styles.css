@@ -359,7 +359,7 @@ li.nav-icon i >span{
     padding: 2%;
     position: relative;
     padding-bottom: 0;
-    transition: all 0.8s ease;
+    transition: all 3s linear;
 }
 
 .cards .card h3 {
@@ -418,7 +418,7 @@ li.nav-icon i >span{
 } */
 .card:hover {
     
-
+    transition: all 3s linear;
     background-image: url(../images/construction-bg.jpg);
     background-size: cover;
     background-position: center;
@@ -426,6 +426,7 @@ li.nav-icon i >span{
 }
 
 .card:hover h3 {
+    
     color: white;
     transition: all 0.2s ease;
 }
@@ -476,3 +477,12 @@ marquee span:nth-child(2), marquee span:nth-child(4), marquee span:nth-child(6),
     font-weight: 800;
 }
 /* end marquee */
+
+/* media Quary */
+@media screen and (max-width: 750px)
+{
+    
+.cards .card {
+    width: 100%;
+}
+}
