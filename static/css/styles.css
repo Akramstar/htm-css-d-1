@@ -15,9 +15,14 @@ ul li {
 
 a {
     text-decoration: none;
+    font-weight: 800;
 }
-
-
+.line-seperator {
+    width: 80%;
+    margin: 0 auto;
+    background-color: black;
+    height: 10px;
+}
 
 
 
@@ -28,7 +33,7 @@ a {
 #social_pins{
     position: fixed;
     top: 50vh;
-    
+    z-index: 1000;
 
 }
 #social_pins div {
@@ -90,9 +95,9 @@ header#header {
     background-image: url(../images/con-1.jpg);
     height: 100vh;
     background-repeat: no-repeat;
-    
+    z-index: 2;
     background-size: cover;
-    background-attachment: scroll;
+    
     background-blend-mode:darken;
     position: relative;
     background-color: rgba(59, 47, 47, 0.202);
@@ -108,7 +113,7 @@ header#header {
         background-repeat: no-repeat;
         
         background-size: cover;
-        background-attachment: scroll;
+        
         background-blend-mode:darken;
 
     }
@@ -119,61 +124,43 @@ header#header {
         background-repeat: no-repeat;
         
         background-size: cover;
-        background-attachment: scroll;
+        
         background-blend-mode:darken;
     }
 
-    25% {
+    30% {
         background-image: url(../images/con-2.jpg);
         opacity: 1;
         background-repeat: no-repeat;
         
         background-size: cover;
-        background-attachment: scroll;
+        
         background-blend-mode:darken;
     }
-    40% {
+    50% {
         background-image: url(../images/con-2.jpg);
         opacity: 0.5;
         background-repeat: no-repeat;
         
         background-size: cover;
-        background-attachment: scroll;
+        
         background-blend-mode:darken;
     }
-    45% {
+    75% {
         background-image: url(../images/con-3.jpg);
         opacity: 1;
         background-repeat: no-repeat;
         
         background-size: cover;
-        background-attachment: scroll;
+        
         background-blend-mode:darken;
     }   
-    65% {
+    100% {
         background-image: url(../images/con-3.jpg);
         opacity: 0.5;
         background-repeat: no-repeat;
         background-size: cover;
-        background-attachment: scroll;
-        background-blend-mode:darken;
-    }
-    70% {
-        background-image: url(../images/con-4.jpg);
-        opacity: 1;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: scroll;
-        background-blend-mode:darken;
-        background-position: top;
-    }
-    90% {
-        background-image: url(../images/con-4.jpg);
-        opacity: 0.5;
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-        background-attachment: scroll;
+        
         background-blend-mode:darken;
     }
 }
@@ -211,7 +198,11 @@ header#header nav .nav-right {
 .nav-icon {
     color: white;
 }
-
+.nav-req {
+    border: 5px;
+    background-color: #d33420;
+    margin-left: 0.5em;
+}
 .nav-right ul li:nth-child(2), .nav-right ul li:nth-child(3), .nav-right ul li:nth-child(4), .nav-right ul li:nth-child(6){
     position: relative;
     
@@ -223,11 +214,14 @@ header#header nav .nav-right {
     visibility: hidden;
     left: -35px;
     transition: all 0.8s ease-in-out;
-    
-} 
+    transform: scale(1.07) translate(0px, 10px);
+    top: 150%;
+}
+
 
 .nav-right>ul li:last-child{
     border-bottom: none;
+  
 }
 
 
@@ -255,8 +249,12 @@ header#header nav .nav-right {
     transform: scale(1.07);
 }
 
-
-
+header#header nav .nav-right .submenu li:hover {
+    background-color: #47140d;
+}
+header#header nav .nav-right .submenu li a:hover{
+    color: white;
+}
 
 
 /* , .nav-right ul li:nth-child(3), .nav-right ul li:nth-child(4), .nav-right ul li:nth-child(6):hover  */
@@ -265,26 +263,21 @@ header#header nav .nav-right {
 
 .submenu li {
     border-bottom: 1px solid rgb(13, 14, 13);
-    background-color: gold;
+    background-color: #9b1c0b;
     border-radius: 2px;
     padding: 8px;
-    
 }
-
-
 
 header#header nav .nav-right> ul{
     display: flex;
     flex-flow: nowrap row;
 }
-header#header nav .nav-right >ul li a {
-    text-decoration: none;
-    color: white;
-}
-
 header#header nav .nav-right >ul li a{
-    padding:0.5em;
+    padding:1em;
     list-style: none;
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+    transition: all 0.5s ease;
 }
 
 li.nav-icon i{
@@ -330,7 +323,18 @@ li.nav-icon i >span{
     padding-bottom: 1em;
     color: rgb(232, 226, 226);
 }
-.main-content button{
+.main-con-buttons{
+    display: flex;
+
+    justify-content: center;
+}
+.main-content .main-con-buttons a{
+    cursor: pointer;
+}
+
+.main-content .main-con-buttons a:first-child{
+    text-decoration: none;
+    color: black;
     padding:2em;
     font-weight: 600;
     border-radius: 4px;
@@ -338,15 +342,43 @@ li.nav-icon i >span{
     transition: all 0.8s ease;
 }
 
-.main-content a button{
-    cursor: pointer;
+.main-content .main-con-buttons a:first-child:hover{
+    background-color: rgb(234, 199, 3);
 }
+.main-content .main-con-buttons a:last-child {
+    text-decoration: none;
 
-
-.main-content a:last-child button{
+    padding:2em;
+    font-weight: 600;
+    border-radius: 4px;
     color: white;
     background-color: transparent;
     border: 1px solid grey;
+    margin-left: 1em;
+    color: rgb(1, 1, 1);
+    /* outline-color:grey; */
+    position: relative;
+
+
+}
+
+.main-content .main-con-buttons a:last-child::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    border-radius: 3px;
+    background-color: white;
+    transition: all 0.8s ease-in-out;
+    
+}
+
+.main-content .main-con-buttons a:last-child:hover::after{
+    width: 100%;
+   
 }
 
 /* .main-content button:first-child:hover{
@@ -392,7 +424,7 @@ li.nav-icon i >span{
     display: inline-block;
     color: rgb(227, 222, 222);
 }
-.section-1-right button {
+.section-1-right a {
     height: 30%;
     background-color: gold;
     border: 1px solid black;
@@ -402,7 +434,7 @@ li.nav-icon i >span{
     margin-top: 3%;
     padding: 3%;
 }
-.section-1-right button:hover {
+.section-1-right a:hover {
     background-color: rgb(226, 192, 3);
    
 }
@@ -537,13 +569,35 @@ li.nav-icon i >span{
 /* marquee */
 marquee {
     margin-block: 4%;
+    transition: all 1s linear;
 }
-marquee span:nth-child(1), marquee span:nth-child(5), marquee span:nth-child(9), marquee span:nth-child(13) {
+marquee span {
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 2em;
+}
+/* marquee span:nth-child(1), marquee span:nth-child(5), marquee span:nth-child(9), marquee span:nth-child(13) {
     font-size: 25px;
     color: white;
     font-weight: 800;
+} */
+marquee span:nth-child(odd) {
+
+    color: gold;
+    font-weight: 800;
+    /* -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: 10px; */
+}
+marquee span:nth-child(even) {
+    font-size: 25px;
+    color: white;
+    font-weight: 800;
+    -webkit-text-stroke-color: rgb(138, 138, 138);
+    -webkit-text-stroke-width: 5px;
 }
 
+
+/* 
 marquee span:nth-child(3), marquee span:nth-child(7), marquee span:nth-child(11), marquee span:nth-child(15) {
     font-size: 25px;
     color: rgb(247, 119, 0);
@@ -554,8 +608,323 @@ marquee span:nth-child(2), marquee span:nth-child(4), marquee span:nth-child(6),
     font-size: 25px;
     color: rgb(255, 255, 255);
     font-weight: 800;
-}
+} */
 /* end marquee */
+
+/* Animation test */
+
+/* .text-animation {
+    background-color: yellow;
+    width: 50%;
+    height: 50vh;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px blueviolet;
+
+    position: relative;
+}
+
+.text-animation span {
+    position: absolute;
+    left: 0;
+    animation: textMove 10s 2 ease;
+
+}
+
+@keyframes textMove {
+    0% {
+        left: -30%;
+    }
+
+    100% {
+        left: 20%;
+    }
+} */
+
+
+/* End Animation test */
+/* #Profiles {
+    width: 100%;
+}
+
+
+.clip-path {
+    width: 25%;
+    display: inline-block;
+}
+.clip-path img {
+    width: 100%;
+    clip-path: circle(30.99% at 240px 177px);
+}
+
+ */
+
+/* Section #3 */
+
+section#req_form {
+    display: flex;
+    padding: 5%;
+}
+#req_form div {
+    padding: 5%;
+}
+#req_form div h3 {
+    font-size: 1.8em;
+    margin-block: 8px;
+}
+
+#req_form div h3:first-child{
+    color: red;
+    font-weight:800;
+
+}
+#req_form div p {
+    color: grey;
+}
+#req_form div:first-child{
+    width: 50%
+}
+#req_form > div:nth-child(2) {
+    border: 1px solid rgba(128, 128, 128, 0.264);
+
+    
+}
+#req_form div:nth-child(2) h3 {
+    border-bottom: 2px solid grey;
+    font-size: 1.2em;
+    padding-bottom: 0.6em;
+}
+#req_form div:nth-child(2) div {
+    display: flex;
+    padding: 4%;
+}
+
+#req_form div:nth-child(2) input {
+    padding: 5%;
+    width: 50%;
+    display: inline-block;
+}
+#req_form div:nth-child(2) input:nth-child(odd){
+    margin-right: 10px;
+}
+
+#req_form div:nth-child(2) div:nth-child(5){
+    padding: 2%;
+    margin: 0;
+
+}
+#req_form div:nth-child(2) div:nth-child(5) input {
+ 
+    width: 5%;
+}
+#req_form div:nth-child(2) div:last-child input{
+    padding: 5%;
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 90%;
+    margin: 2% auto;
+    font-weight: 800;
+    justify-content: center;
+    transition: all 0.8s ease;
+}
+#req_form div:nth-child(2) div:last-child input:hover{
+    background-color: rgb(221, 187, 0);    
+}
+
+#req_form div:nth-child(2) div:last-child .span-it {
+    position: relative;
+}
+#req_form div:nth-child(2) div:last-child .span-it:before{
+    content: '';
+    position: absolute;
+    background-color: #fbfbfc;
+    top: 4px;
+    left: 4px;
+    width: 6px;
+    height: 6px;
+    border: none;
+    border-radius: 100%;
+    transform-origin: 8px 8px;
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+/* End of Section #3 */
+
+/* Section #4 Avatars*/
+section#company_workers{
+    padding: 5% 10% 10% 10%;
+}
+section#company_workers .avatars{
+    display: flex;
+    width: 100%;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+section#company_workers .avatars div {
+    width:14%;
+    margin: 0 0 0 1%;
+    text-align: center;
+    justify-content: center;
+}
+section#company_workers .avatars div img{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+}
+section#company_workers .avatars div .avatars-title {
+
+    width: 100%;
+}
+section#company_workers .avatars div .avatars-title h5 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+section#company_workers .avatars div .avatars-title span{
+    color: red;
+}
+
+/* End Section #4 */
+
+/* Section #5 */
+
+
+section#services {
+    background-image: url(../images/icon.png);
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    background-color:#EDF0F1;
+    border-radius: 15px;
+    margin-left: 3%;
+
+}
+section#services .section-1-right p{
+    color:#111010;
+}
+section#services h2:first-child {
+    color: red;
+    font-weight: 800;
+    margin-top: 0;
+}
+section#services .services-img{
+    display: flex;
+    flex-wrap: wrap;
+}
+section#services .services-img div {
+    width: 25%;
+    padding: 1%;
+    position: relative;
+    
+}
+
+section#services .services-img div:before
+{
+    position: absolute;
+    content: attr(data-title);
+    top: 90%;
+    left: 50%;
+    
+    color: #ffffff;
+
+    text-transform: capitalize;
+    font-size: 1em;
+    font-weight: 800;
+    line-height: 1.25;
+    z-index: 110;
+    transform: translate(-50%, -50%);
+    transition: all .8s ease-in-out;
+    z-index: 10;
+}
+section#services .services-img div:hover:before{
+    top: 50%;
+}
+
+section#services .services-img div a{
+    position: relative;
+    display: block;
+    border: 1px solid black;
+}
+section#services .services-img div a::before{
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 15%, rgba(255, 255, 255, 0) 65%);
+        transition: all 0.8s ease-in-out;
+}
+section#services .services-img div a:hover:before{
+    background-color: rgba(0, 0, 0, 0.298);
+}
+
+section#services .services-img div a p, section#services .services-img div a h4 {
+    margin: 0;
+    padding: 2.5%;
+    
+}
+section#services .services-img div a p, section#services .services-img div a h4,
+section#services .services-img div a i{
+    color: white;
+    opacity:0;
+    visibility: none;
+    transition: all 0.8s ease-in-out;
+}
+
+section#services .services-img div :hover p, section#services .services-img div:hover h4,
+section#services .services-img div:hover i{
+    opacity:1;
+    visibility: visible;
+    transition: all 0.8s ease-in-out;
+    transform: translate(0%, -90%);
+    overflow: hidden;
+}
+
+section#services .services-img div img {
+    width: 100%;
+}
+section#services .line-seperator{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #494646;
+    height: 2px;
+}
+section#services .experience{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+section#services .serivces-exp {
+    color: rgb(255, 0, 0);
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+section#services .serivces-exp h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-right: 8%;
+    text-shadow: rgb(255, 0, 0) 1px 0px 0px, rgb(255, 0, 0) 0.540302px 0.841471px 0px, rgb(255, 0, 0) -0.416147px 0.909297px 0px, rgb(255, 0, 0) -0.989992px 0.14112px 0px, rgb(255, 0, 0) -0.653644px -0.756802px 0px, rgb(255, 0, 0) 0.283662px -0.958924px 0px, rgb(255, 0, 0) 0.96017px -0.279415px 0px;
+}
+section#services .serivces-exp p{
+    color: rgb(5, 5, 37);
+    font-size: 1.1em;
+    font-weight: 600;
+    
+}
+
+
+/* End Section #5 */
 /* Reposonsive */
 @media screen and (max-width: 750px)
 {
@@ -563,5 +932,8 @@ marquee span:nth-child(2), marquee span:nth-child(4), marquee span:nth-child(6),
 .cards .card {
     width: 100%;
 }
+section#company_workers .avatars div {
+    width:30%;
 }
 
+}
