@@ -6,7 +6,14 @@
 
 body {
     margin: 0;
-   
+    font-family: 'Inter', "Open Sans", 'Times New Roman', Times, serif;
+    
+}
+
+@font-face {
+    src: url(../fonts/Inter-Regular.woff2);
+    font-family: 'Inter';
+
 }
 
 ul li {
@@ -23,8 +30,35 @@ a {
     background-color: black;
     height: 10px;
 }
-
-
+.back-top {
+    opacity: 1;
+    visibility: visible;
+    bottom: 20px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    z-index: 1000;
+    bottom: 0;
+    transition: all .2s ease-in-out;
+}
+.back-top::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all .15s ease-in-out;
+}
 
 /* End Global styles */
 
@@ -101,7 +135,7 @@ header#header {
     background-blend-mode:darken;
     position: relative;
     background-color: rgba(59, 47, 47, 0.202);
-    animation: slideing 20s infinite linear;
+    animation:  20s infinite linear;
     transition: 0.8s all ease-out;
 
 }
@@ -173,13 +207,14 @@ header#header {
 header#header nav {
     display: flex;
     justify-content: space-between;
-    
+    width: 100%;
     border-bottom: 4px solid white;
     flex-flow: wrap row;
-
+    align-items: center;
 }
 .nav-left {
     padding: 1.4em 1em 0 1em; 
+    width: 30%;
 }
 
 .nav-left h2 {
@@ -198,10 +233,30 @@ header#header nav .nav-right {
 .nav-icon {
     color: white;
 }
+
+#nav-frst{
+    position: relative;
+    line-height: 1;
+}
+#nav-frst > a:before{
+    background-color: gold;
+    position: absolute;
+    content: '';
+    bottom: -39px;
+    left: 4px;
+    width: 0;
+    height: 6px;
+    width: calc(100% + 0px);
+}
+
 .nav-req {
-    border: 5px;
+    padding: 2%;
+    border-radius: 5px;
     background-color: #d33420;
     margin-left: 0.5em;
+    color: white;
+    line-height: 1;
+    cursor: pointer;
 }
 .nav-right ul li:nth-child(2), .nav-right ul li:nth-child(3), .nav-right ul li:nth-child(4), .nav-right ul li:nth-child(6){
     position: relative;
@@ -217,13 +272,6 @@ header#header nav .nav-right {
     transform: scale(1.07) translate(0px, 10px);
     top: 150%;
 }
-
-
-.nav-right>ul li:last-child{
-    border-bottom: none;
-  
-}
-
 
 .nav-right ul li:nth-child(2):hover .submenu-1{
     opacity: 1;
@@ -270,16 +318,36 @@ header#header nav .nav-right .submenu li a:hover{
 
 header#header nav .nav-right> ul{
     display: flex;
-    flex-flow: nowrap row;
+    flex-flow: wrap row;
+    align-items: baseline;
 }
 header#header nav .nav-right >ul li a{
-    padding:1em;
+    padding: 0.4rem;
     list-style: none;
     text-decoration: none;
-    color: rgb(211, 211, 211);
+    color: rgb(255, 255, 255);
     transition: all 0.5s ease;
+    font-size: 1.2rem;
+    align-items: baseline;
 }
 
+header#header nav .nav-right >ul li ul li:first-child{
+    position: relative;
+}
+header#header nav .nav-right >ul li ul li:first-child::before{
+    position: absolute;
+    content: '';
+    top: -4px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top: 4px solid;
+    border-right: 4px solid;
+    color: #9b1b0b;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
 li.nav-icon i{
     font-size: 1em;
 }
@@ -581,21 +649,44 @@ marquee span {
     color: white;
     font-weight: 800;
 } */
-marquee span:nth-child(odd) {
+.marq-2 span:nth-child(odd) {
 
-    color: gold;
+    color: #C6C6C6;
     font-weight: 800;
-    /* -webkit-text-stroke-color: red;
-    -webkit-text-stroke-width: 10px; */
 }
-marquee span:nth-child(even) {
+.marq-2 span:nth-child(4n+1) {
+
+    color: black;
+    font-weight: 800;
+}
+.marq-2 span:nth-child(even) {
     font-size: 25px;
-    color: white;
+    color: #C6C6C6;
     font-weight: 800;
-    -webkit-text-stroke-color: rgb(138, 138, 138);
-    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #C6C6C6;
+    -webkit-text-stroke-width: 2px;
 }
 
+.marq-1 span:nth-child(odd) {
+
+    color: #44546A;
+    font-weight: 800;
+}
+.marq-1 span:nth-child(4n+1) {
+
+    color: #ffffff;
+    font-weight: 800;
+}
+.marq-1 span:nth-child(even) {
+    font-size: 25px;
+    color: #44546A;
+    font-weight: 800;
+    -webkit-text-stroke-color: #44546A;
+    -webkit-text-stroke-width: 2px;
+}
+marquee:hover {
+    animation-play-state: paused;
+}
 
 /* 
 marquee span:nth-child(3), marquee span:nth-child(7), marquee span:nth-child(11), marquee span:nth-child(15) {
@@ -757,41 +848,90 @@ section#req_form {
 /* End of Section #3 */
 
 /* Section #4 Avatars*/
-section#company_workers{
-    padding: 5% 10% 10% 10%;
-}
+
 section#company_workers .avatars{
     display: flex;
-    width: 100%;
-
     flex-wrap: wrap;
+    max-width: 100%;
+    padding: 5%;
     justify-content: space-between;
-    align-items: flex-start;
 }
-section#company_workers .avatars div {
-    width:14%;
-    margin: 0 0 0 1%;
+section#company_workers .avatars .avatar{
+    width: 18%;
     text-align: center;
-    justify-content: center;
+    transition: all 0.4s ease-in-out;
 }
-section#company_workers .avatars div img{
-    width: 150px;
-    border-radius: 50%;
-    height: 150px;
+section#company_workers .avatars .avatar:hover{
+    transform:translateY(-5px);
 }
-section#company_workers .avatars div .avatars-title {
+section#company_workers .avatars .team-avatar-img{
+    position: relative;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    clip-path: circle(33.43% at 50% 50%);
+}
 
-    width: 100%;
+section#company_workers .avatars .team-avatar-img .team-avatar-socials {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    opacity: 1;
+    visibility:visible;
+    transition: all 0.8s ease-in-out;
+} 
+section#company_workers .avatars .team-avatar-img .team-avatar-socials i {
+    font-size: 1.5rem;
+    transition: all 0.8s ease;
+    color: #e0dede;
+    opacity: 0;
+
 }
-section#company_workers .avatars div .avatars-title h5 {
-    margin: 0;
+section#company_workers .avatars .team-avatar-img:hover i {
+    font-size: 2.5rem;
+    transform: scale(1.1);
+
+    opacity: 1;
+}
+section#company_workers .avatars .team-avatar-img .team-avatar-socials i:hover {
+    color: #fff;
+    opacity: 1;
+}
+section#company_workers .avatars .team-avatar-content h5{
+    margin-block: 0.5rem;
+    line-height: 1.25;
     font-size: 1.2em;
 }
-
-section#company_workers .avatars div .avatars-title span{
-    color: red;
+section#company_workers .avatars .team-avatar-content span{
+    color: #e61804;
+    font-weight: 800;
 }
+section#company_workers .avatars .team-avatar-img::before {
+    opacity: 0;
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: opacity .2s ease-in-out;
+}
+section#company_workers .avatars .team-avatar-img:hover .team-avatar-socials{
+    opacity: 1;
+    visibility: visible;
+} 
+section#company_workers .avatars .team-avatar-img:hover:before{
+    opacity: 1;
+    visibility: visible;
+} 
 
+section#company_workers .avatars .team-avatar-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
 /* End Section #4 */
 
 /* Section #5 */
@@ -870,13 +1010,21 @@ section#services .services-img div a:hover:before{
 section#services .services-img div a p, section#services .services-img div a h4 {
     margin: 0;
     padding: 2.5%;
-    
+    visibility: hidden;
+    margin-block: 0;
 }
+section#services .services-img div a:hover p,
+section#services .services-img div a:hover h4,
+section#services .services-img div a:hover i{
+    visibility: visible;
+}  
+
+
 section#services .services-img div a p, section#services .services-img div a h4,
 section#services .services-img div a i{
     color: white;
     opacity:0;
-    visibility: none;
+    visibility: hidden;
     transition: all 0.8s ease-in-out;
 }
 
@@ -901,30 +1049,163 @@ section#services .line-seperator{
 section#services .experience{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    width: 100%;
+    padding: 0 5%;
+    justify-content: center;
 }
 section#services .serivces-exp {
-    color: rgb(255, 0, 0);
-    width: 20%;
     display: flex;
     flex-direction: row;
+    width: 15em;
+    justify-content: center;
     align-items: center;
 }
 section#services .serivces-exp h3 {
+    color: rgb(255, 0, 0);
     font-size: 3rem;
     font-weight: 800;
     padding-right: 8%;
-    text-shadow: rgb(255, 0, 0) 1px 0px 0px, rgb(255, 0, 0) 0.540302px 0.841471px 0px, rgb(255, 0, 0) -0.416147px 0.909297px 0px, rgb(255, 0, 0) -0.989992px 0.14112px 0px, rgb(255, 0, 0) -0.653644px -0.756802px 0px, rgb(255, 0, 0) 0.283662px -0.958924px 0px, rgb(255, 0, 0) 0.96017px -0.279415px 0px;
+    
 }
 section#services .serivces-exp p{
     color: rgb(5, 5, 37);
     font-size: 1.1em;
     font-weight: 600;
+    width: 10em;
     
 }
-
-
 /* End Section #5 */
+
+/* Start Section #6 quote */
+section#quote {
+    background-image: url(../images/quote-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+                             
+}
+section#quote blockquote{
+
+    width: 100%;
+    padding: 10% 5% 0 5%;
+    margin: 0;
+}
+section#quote blockquote p{
+    text-align: center;
+    font-size: 2.5em;
+}
+section#quote blockquote .qt-gradient {
+    font-weight: 600;
+    background-image: linear-gradient(45deg, #eec251 20%, #e8c366);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.quote-down {
+    text-align: center;
+    padding-bottom: 1%;
+    
+}
+.quote-contai {
+    background-image: url(../images/testimonials-bg.png);
+    padding-bottom: 5%;
+}
+.quote-down img {
+    width: 15%;
+    opacity: 0.5;  
+    transition: all 0.8s ease; 
+}
+.quote-down img:hover {
+    opacity: 1;
+}
+.quote-down-text {
+    text-align: center;
+    font-weight: 800;
+}
+.quote-down-text span:last-child {
+    color: #bf0900;
+    padding-bottom: 2%;
+}
+.marq-2 {
+    margin-block: 5%;
+}
+/* Start Section #6 */
+section#why_us {
+    background-color: #0F1D30;
+    background-image: url(../images/cta-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-block: 5%;
+}
+section#why_us h3:first-child {
+    color: gold;
+    margin-block: 0.3em;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+section#why_us > h3:nth-child(2){
+    color: white;
+    margin-block: 0.3em;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+section#why_us {
+    margin: 0 2%;
+    border-radius: 35px;
+}
+section#why_us .package-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding-block: 5%;
+    justify-content: space-around;
+    padding: 5%;
+}
+section#why_us .package-container .package-section{
+    width: 30%;
+}
+section#why_us .package-container .package-section .package-div i {
+    font-size: 4em;
+    color: #9BA8BA;
+} 
+section#why_us .package-container h4 {
+    color: white;
+    font-size: 1.5em;
+}
+section#why_us .package-container p {
+    color:#7E8999;   
+}
+
+section#why_us form label input{
+    height: 65px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+}
+section#why_us form label{
+    position: relative;
+}
+section#why_us form label input[type=tel]{
+    width: 40%;
+    border-radius: 4px;
+    border: none;
+}
+/* section#why_us form label a{
+    cursor: pointer;
+} */
+section#why_us form label input[type=submit]{
+    background-color: #f7c02f;
+    margin-left: -30px;
+    clip-path: polygon(100% 0%, 100% 100%, 54% 100%, 0% 100%, 13% 0);
+    font-weight: 800;
+    cursor: pointer;
+}
+section#why_us form label input::placeholder{
+    font-size: 1.1em;
+}
+/* End Section #6 */
 /* Reposonsive */
 @media screen and (max-width: 750px)
 {
@@ -932,8 +1213,7 @@ section#services .serivces-exp p{
 .cards .card {
     width: 100%;
 }
-section#company_workers .avatars div {
-    width:30%;
+section#company_workers .avatars .team-avatar-img .team-avatar-socials i{
+    font-size: 1rem;
 }
-
 }
