@@ -468,11 +468,11 @@ li.nav-icon i >span{
 
 .container-section-1 {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: 2em;
     
-    width: 100%;
+    max-width: 100%;
 }
 
 .section-1-left {
@@ -934,7 +934,7 @@ section#company_workers .avatars .team-avatar-img img{
 }
 /* End Section #4 */
 
-/* Section #5 */
+/* Section #5 Error will need edited just replace img tag with background image */
 
 
 section#services {
@@ -972,9 +972,7 @@ section#services .services-img div:before
     content: attr(data-title);
     top: 90%;
     left: 50%;
-    
     color: #ffffff;
-
     text-transform: capitalize;
     font-size: 1em;
     font-weight: 800;
